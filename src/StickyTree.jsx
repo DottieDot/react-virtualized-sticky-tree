@@ -258,6 +258,10 @@ export default class StickyTree extends React.PureComponent {
         if (newProps.scrollIndex !== undefined && newProps.scrollIndex >= 0) {
             this.scrollIndexIntoView(newProps.scrollIndex);
         }
+
+        if (newProps.scrollTop !== undefined && newProps.scrollTop >= 0) {
+            this.setScrollTop(newProp.scrollTop);
+        }
     }
 
     UNSAFE_componentWillUpdate(newProps, newState) {
